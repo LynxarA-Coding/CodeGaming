@@ -1,4 +1,6 @@
 # CodeGaming Guides
+
+![image](https://user-images.githubusercontent.com/52619963/170831080-b1be280f-f58b-4a81-983c-9392c99eadd8.png)
  
 Это приложение организации CODEGAMING с гайдами по игре Star Cititzen
 
