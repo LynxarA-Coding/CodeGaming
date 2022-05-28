@@ -40,12 +40,13 @@
             this.lblPage = new System.Windows.Forms.Label();
             this.pnlDivider2 = new System.Windows.Forms.Panel();
             this.elpsExploration = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnExploration = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTrading = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.lblInfo = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlSidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -53,6 +54,7 @@
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Controls.Add(this.lblInfo);
             this.pnlHeader.Controls.Add(this.lblPage);
             this.pnlHeader.Controls.Add(this.pbLogo);
             this.pnlHeader.Location = new System.Drawing.Point(100, 0);
@@ -114,7 +116,7 @@
             this.lblPage.AutoSize = true;
             this.lblPage.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPage.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPage.Location = new System.Drawing.Point(199, 12);
+            this.lblPage.Location = new System.Drawing.Point(199, 7);
             this.lblPage.Name = "lblPage";
             this.lblPage.Size = new System.Drawing.Size(105, 33);
             this.lblPage.TabIndex = 1;
@@ -132,6 +134,11 @@
             // 
             this.elpsExploration.BorderRadius = 10;
             this.elpsExploration.TargetControl = this.btnExploration;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // btnExploration
             // 
@@ -203,10 +210,16 @@
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
-            // guna2Elipse1
+            // lblInfo
             // 
-            this.guna2Elipse1.BorderRadius = 15;
-            this.guna2Elipse1.TargetControl = this;
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblInfo.Location = new System.Drawing.Point(202, 39);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(222, 13);
+            this.lblInfo.TabIndex = 2;
+            this.lblInfo.Text = "@by LynxarA for CODEGAMING 2022 v. beta1.0";
             // 
             // MainDashboard
             // 
@@ -251,6 +264,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnExploration;
         private Guna.UI2.WinForms.Guna2Elipse elpsExploration;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
 
