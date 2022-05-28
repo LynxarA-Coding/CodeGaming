@@ -1,0 +1,8 @@
+
+*.exe
+CodeGaming/bin/Debug/CodeGaming Guides.exe.config
+CodeGaming/bin/Debug/CodeGaming Guides.pdb
+CodeGaming/bin/Debug/Guna.UI2.dll
+CodeGaming/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs
+CodeGaming/bin/*
+CodeGaming/obj/*
