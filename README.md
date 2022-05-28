@@ -7,4 +7,4 @@
 <br>Организация:
 <a href="https://robertsspaceindustries.com/orgs/CODEGAMING">Ссылка на Страницу Организации CODEGAMING</a>
 <br>Ссылка на скачку приложения:
-<a href="">Ссылка</a>
+<a href="https://github.com/LynxarA-Coding/CodeGaming/releases">Ссылка</a>
