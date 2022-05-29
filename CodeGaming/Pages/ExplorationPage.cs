@@ -17,8 +17,21 @@ namespace CodeGaming.Pages
             InitializeComponent();
         }
 
+        private void FlushPopups()
+        {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name == "ExplorationPopup")
+                {
+                    Application.OpenForms[i].Close();
+                }
+            }
+        }
+
         private void btnShowJavelin_Click(object sender, EventArgs e)
         {
+            FlushPopups();
+
             Clipboard.SetText("https://imgur.com/a/hzvTzX2");
             ExplorationPopup popup = new ExplorationPopup();
             popup.lblHeader.Text = "Javelin";
@@ -29,6 +42,8 @@ namespace CodeGaming.Pages
 
         private void btnShowRiver_Click(object sender, EventArgs e)
         {
+            FlushPopups();
+
             Clipboard.SetText("https://www.youtube.com/watch?v=2_NFGJ3mXOc");
             ExplorationPopup popup = new ExplorationPopup();
             popup.lblHeader.Text = "Река на Microtech";
@@ -39,6 +54,8 @@ namespace CodeGaming.Pages
 
         private void btnShowCanyon_Click(object sender, EventArgs e)
         {
+            FlushPopups();
+
             Clipboard.SetText("https://www.youtube.com/watch?v=y751Kvg1vN4");
             ExplorationPopup popup = new ExplorationPopup();
             popup.lblHeader.Text = "Каньон Hurston";
@@ -49,6 +66,8 @@ namespace CodeGaming.Pages
 
         private void btnShowGrimHexHide_Click(object sender, EventArgs e)
         {
+            FlushPopups();
+
             Clipboard.SetText("https://youtu.be/_9BlhmfYv40");
             ExplorationPopup popup = new ExplorationPopup();
             popup.lblHeader.Text = "Убежище на Grim HEX";
@@ -59,6 +78,8 @@ namespace CodeGaming.Pages
 
         private void btnShowNewYear_Click(object sender, EventArgs e)
         {
+            FlushPopups();
+
             Clipboard.SetText("https://imgur.com/a/jKDTnPT");
             ExplorationPopup popup = new ExplorationPopup();
             popup.lblHeader.Text = "Новогоднее местечко Microtech";

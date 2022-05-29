@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.lblPage = new System.Windows.Forms.Label();
             this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pnlSidePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlDivider1 = new System.Windows.Forms.Panel();
@@ -37,16 +39,15 @@
             this.elpsTrading = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlHandler = new System.Windows.Forms.Panel();
             this.elpsLogout = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lblPage = new System.Windows.Forms.Label();
             this.pnlDivider2 = new System.Windows.Forms.Panel();
             this.elpsExploration = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnRefueling = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnExploration = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTrading = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.lblInfo = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlSidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -63,12 +64,35 @@
             this.pnlHeader.Size = new System.Drawing.Size(1180, 57);
             this.pnlHeader.TabIndex = 0;
             // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblInfo.Location = new System.Drawing.Point(202, 39);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(222, 13);
+            this.lblInfo.TabIndex = 2;
+            this.lblInfo.Text = "@by LynxarA for CODEGAMING 2022 v. beta1.0";
+            // 
+            // lblPage
+            // 
+            this.lblPage.AutoSize = true;
+            this.lblPage.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPage.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPage.Location = new System.Drawing.Point(199, 7);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(105, 33);
+            this.lblPage.TabIndex = 1;
+            this.lblPage.Text = "Главная";
+            // 
             // DragControl
             // 
             this.DragControl.TargetControl = this.pnlHeader;
             // 
             // pnlSidePanel
             // 
+            this.pnlSidePanel.Controls.Add(this.btnRefueling);
             this.pnlSidePanel.Controls.Add(this.btnExploration);
             this.pnlSidePanel.Controls.Add(this.btnTrading);
             this.pnlSidePanel.Controls.Add(this.btnHome);
@@ -111,17 +135,6 @@
             this.elpsLogout.BorderRadius = 10;
             this.elpsLogout.TargetControl = this.btnLogOut;
             // 
-            // lblPage
-            // 
-            this.lblPage.AutoSize = true;
-            this.lblPage.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPage.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPage.Location = new System.Drawing.Point(199, 7);
-            this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(105, 33);
-            this.lblPage.TabIndex = 1;
-            this.lblPage.Text = "Главная";
-            // 
             // pnlDivider2
             // 
             this.pnlDivider2.BackColor = System.Drawing.Color.DimGray;
@@ -139,6 +152,21 @@
             // 
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // btnRefueling
+            // 
+            this.btnRefueling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(30)))), ((int)(((byte)(53)))));
+            this.btnRefueling.CheckedState.Parent = this.btnRefueling;
+            this.btnRefueling.HoverState.Parent = this.btnRefueling;
+            this.btnRefueling.Image = global::CodeGaming.Properties.Resources.refuel;
+            this.btnRefueling.Location = new System.Drawing.Point(20, 266);
+            this.btnRefueling.Name = "btnRefueling";
+            this.btnRefueling.PressedState.Parent = this.btnRefueling;
+            this.btnRefueling.Size = new System.Drawing.Size(60, 60);
+            this.btnRefueling.TabIndex = 1;
+            this.btnRefueling.Click += new System.EventHandler(this.btnRefueling_Click);
+            this.btnRefueling.MouseEnter += new System.EventHandler(this.btnRefueling_MouseEnter);
+            this.btnRefueling.MouseLeave += new System.EventHandler(this.btnRefueling_MouseLeave);
             // 
             // btnExploration
             // 
@@ -210,17 +238,6 @@
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
-            // lblInfo
-            // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblInfo.Location = new System.Drawing.Point(202, 39);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(222, 13);
-            this.lblInfo.TabIndex = 2;
-            this.lblInfo.Text = "@by LynxarA for CODEGAMING 2022 v. beta1.0";
-            // 
             // MainDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +282,7 @@
         private Guna.UI2.WinForms.Guna2Elipse elpsExploration;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label lblInfo;
+        private Guna.UI2.WinForms.Guna2ImageButton btnRefueling;
     }
 }
 

@@ -31,36 +31,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExplorationPage));
             this.pnlExplores = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlJavelin = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnShowJavelin = new Guna.UI2.WinForms.Guna2TileButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pbJavelin = new System.Windows.Forms.PictureBox();
             this.pnlRiver = new Guna.UI2.WinForms.Guna2Panel();
             this.btnShowRiver = new Guna.UI2.WinForms.Guna2TileButton();
             this.lblRiver = new System.Windows.Forms.Label();
+            this.pbRiver = new System.Windows.Forms.PictureBox();
             this.pnlCanyon = new Guna.UI2.WinForms.Guna2Panel();
             this.btnShowCanyon = new Guna.UI2.WinForms.Guna2TileButton();
             this.lblCanyon = new System.Windows.Forms.Label();
+            this.pbCanyon = new System.Windows.Forms.PictureBox();
             this.pnlGrimHexHide = new Guna.UI2.WinForms.Guna2Panel();
             this.btnShowGrimHexHide = new Guna.UI2.WinForms.Guna2TileButton();
             this.lblGrimHexHide = new System.Windows.Forms.Label();
+            this.pbGrimHexHide = new System.Windows.Forms.PictureBox();
             this.pnlNewYear = new Guna.UI2.WinForms.Guna2Panel();
             this.btnShowNewYear = new Guna.UI2.WinForms.Guna2TileButton();
             this.lblNewYear = new System.Windows.Forms.Label();
-            this.pbJavelin = new System.Windows.Forms.PictureBox();
-            this.pbRiver = new System.Windows.Forms.PictureBox();
-            this.pbCanyon = new System.Windows.Forms.PictureBox();
-            this.pbGrimHexHide = new System.Windows.Forms.PictureBox();
             this.pbNewYear = new System.Windows.Forms.PictureBox();
             this.lblGuide = new System.Windows.Forms.Label();
             this.pnlExplores.SuspendLayout();
             this.pnlJavelin.SuspendLayout();
-            this.pnlRiver.SuspendLayout();
-            this.pnlCanyon.SuspendLayout();
-            this.pnlGrimHexHide.SuspendLayout();
-            this.pnlNewYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbJavelin)).BeginInit();
+            this.pnlRiver.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRiver)).BeginInit();
+            this.pnlCanyon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCanyon)).BeginInit();
+            this.pnlGrimHexHide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGrimHexHide)).BeginInit();
+            this.pnlNewYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNewYear)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,17 +89,6 @@
             this.pnlJavelin.Size = new System.Drawing.Size(374, 267);
             this.pnlJavelin.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(106)))), ((int)(((byte)(236)))));
-            this.label1.Location = new System.Drawing.Point(13, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Место крушения Javelin";
-            // 
             // btnShowJavelin
             // 
             this.btnShowJavelin.BorderRadius = 6;
@@ -116,6 +105,27 @@
             this.btnShowJavelin.TabIndex = 2;
             this.btnShowJavelin.Text = "ПОКАЗАТЬ МАРШРУТ";
             this.btnShowJavelin.Click += new System.EventHandler(this.btnShowJavelin_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(106)))), ((int)(((byte)(236)))));
+            this.label1.Location = new System.Drawing.Point(13, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Место крушения Javelin";
+            // 
+            // pbJavelin
+            // 
+            this.pbJavelin.Image = global::CodeGaming.Properties.Resources.javelin;
+            this.pbJavelin.Location = new System.Drawing.Point(17, 49);
+            this.pbJavelin.Name = "pbJavelin";
+            this.pbJavelin.Size = new System.Drawing.Size(340, 170);
+            this.pbJavelin.TabIndex = 0;
+            this.pbJavelin.TabStop = false;
+            this.pbJavelin.Click += new System.EventHandler(this.btnShowJavelin_Click);
             // 
             // pnlRiver
             // 
@@ -157,6 +167,16 @@
             this.lblRiver.TabIndex = 1;
             this.lblRiver.Text = "Река на Microtech";
             // 
+            // pbRiver
+            // 
+            this.pbRiver.Image = global::CodeGaming.Properties.Resources.mriver;
+            this.pbRiver.Location = new System.Drawing.Point(17, 49);
+            this.pbRiver.Name = "pbRiver";
+            this.pbRiver.Size = new System.Drawing.Size(340, 170);
+            this.pbRiver.TabIndex = 0;
+            this.pbRiver.TabStop = false;
+            this.pbRiver.Click += new System.EventHandler(this.btnShowRiver_Click);
+            // 
             // pnlCanyon
             // 
             this.pnlCanyon.Controls.Add(this.btnShowCanyon);
@@ -196,6 +216,16 @@
             this.lblCanyon.Size = new System.Drawing.Size(158, 23);
             this.lblCanyon.TabIndex = 1;
             this.lblCanyon.Text = "Каньон на Hurston";
+            // 
+            // pbCanyon
+            // 
+            this.pbCanyon.Image = global::CodeGaming.Properties.Resources.canyon;
+            this.pbCanyon.Location = new System.Drawing.Point(17, 49);
+            this.pbCanyon.Name = "pbCanyon";
+            this.pbCanyon.Size = new System.Drawing.Size(340, 170);
+            this.pbCanyon.TabIndex = 0;
+            this.pbCanyon.TabStop = false;
+            this.pbCanyon.Click += new System.EventHandler(this.btnShowCanyon_Click);
             // 
             // pnlGrimHexHide
             // 
@@ -237,6 +267,16 @@
             this.lblGrimHexHide.TabIndex = 1;
             this.lblGrimHexHide.Text = "Убежище на Grim HEX";
             // 
+            // pbGrimHexHide
+            // 
+            this.pbGrimHexHide.Image = global::CodeGaming.Properties.Resources.grimhexhide;
+            this.pbGrimHexHide.Location = new System.Drawing.Point(17, 49);
+            this.pbGrimHexHide.Name = "pbGrimHexHide";
+            this.pbGrimHexHide.Size = new System.Drawing.Size(340, 170);
+            this.pbGrimHexHide.TabIndex = 0;
+            this.pbGrimHexHide.TabStop = false;
+            this.pbGrimHexHide.Click += new System.EventHandler(this.btnShowGrimHexHide_Click);
+            // 
             // pnlNewYear
             // 
             this.pnlNewYear.Controls.Add(this.btnShowNewYear);
@@ -277,42 +317,6 @@
             this.lblNewYear.TabIndex = 1;
             this.lblNewYear.Text = "Новогоднее местечко Microtech";
             // 
-            // pbJavelin
-            // 
-            this.pbJavelin.Image = global::CodeGaming.Properties.Resources.javelin;
-            this.pbJavelin.Location = new System.Drawing.Point(17, 49);
-            this.pbJavelin.Name = "pbJavelin";
-            this.pbJavelin.Size = new System.Drawing.Size(340, 170);
-            this.pbJavelin.TabIndex = 0;
-            this.pbJavelin.TabStop = false;
-            // 
-            // pbRiver
-            // 
-            this.pbRiver.Image = global::CodeGaming.Properties.Resources.mriver;
-            this.pbRiver.Location = new System.Drawing.Point(17, 49);
-            this.pbRiver.Name = "pbRiver";
-            this.pbRiver.Size = new System.Drawing.Size(340, 170);
-            this.pbRiver.TabIndex = 0;
-            this.pbRiver.TabStop = false;
-            // 
-            // pbCanyon
-            // 
-            this.pbCanyon.Image = global::CodeGaming.Properties.Resources.canyon;
-            this.pbCanyon.Location = new System.Drawing.Point(17, 49);
-            this.pbCanyon.Name = "pbCanyon";
-            this.pbCanyon.Size = new System.Drawing.Size(340, 170);
-            this.pbCanyon.TabIndex = 0;
-            this.pbCanyon.TabStop = false;
-            // 
-            // pbGrimHexHide
-            // 
-            this.pbGrimHexHide.Image = global::CodeGaming.Properties.Resources.grimhexhide;
-            this.pbGrimHexHide.Location = new System.Drawing.Point(17, 49);
-            this.pbGrimHexHide.Name = "pbGrimHexHide";
-            this.pbGrimHexHide.Size = new System.Drawing.Size(340, 170);
-            this.pbGrimHexHide.TabIndex = 0;
-            this.pbGrimHexHide.TabStop = false;
-            // 
             // pbNewYear
             // 
             this.pbNewYear.Image = global::CodeGaming.Properties.Resources.newyear;
@@ -321,6 +325,7 @@
             this.pbNewYear.Size = new System.Drawing.Size(340, 170);
             this.pbNewYear.TabIndex = 0;
             this.pbNewYear.TabStop = false;
+            this.pbNewYear.Click += new System.EventHandler(this.btnShowNewYear_Click);
             // 
             // lblGuide
             // 
@@ -348,18 +353,18 @@
             this.pnlExplores.ResumeLayout(false);
             this.pnlJavelin.ResumeLayout(false);
             this.pnlJavelin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJavelin)).EndInit();
             this.pnlRiver.ResumeLayout(false);
             this.pnlRiver.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRiver)).EndInit();
             this.pnlCanyon.ResumeLayout(false);
             this.pnlCanyon.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCanyon)).EndInit();
             this.pnlGrimHexHide.ResumeLayout(false);
             this.pnlGrimHexHide.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGrimHexHide)).EndInit();
             this.pnlNewYear.ResumeLayout(false);
             this.pnlNewYear.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJavelin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRiver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCanyon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGrimHexHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNewYear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

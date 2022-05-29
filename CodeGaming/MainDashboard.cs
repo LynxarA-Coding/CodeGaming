@@ -41,16 +41,14 @@ namespace CodeGaming
             {
                 case 0:
                     return btnHome;
-                    break;
                 case 1:
                     return btnTrading;
-                    break;
                 case 2:
                     return btnExploration;
-                    break;
+                case 3:
+                    return btnRefueling;
                 default:
                     return btnHome;
-                    break;
             }
         }
 
@@ -71,6 +69,9 @@ namespace CodeGaming
                     case 2:
                         button.Image = Properties.Resources.exploration_pressed;
                         break;
+                    case 3:
+                        button.Image = Properties.Resources.refuel_pressed;
+                        break;
                 }
             }
             else
@@ -85,6 +86,9 @@ namespace CodeGaming
                         break;
                     case 2:
                         button.Image = Properties.Resources.exploration;
+                        break;
+                    case 3:
+                        button.Image = Properties.Resources.refuel;
                         break;
                 }
             }
@@ -139,6 +143,18 @@ namespace CodeGaming
             LoadPage(page);
         }
 
+        private void btnRefueling_Click(object sender, EventArgs e)
+        {
+            lblPage.Text = "Заправка";
+            this.Text = "CODEG | Заправка";
+
+            _currentPageId = 3;
+            PageChanged();
+
+            RefuelPage page = new RefuelPage();
+            LoadPage(page);
+        }
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -180,6 +196,19 @@ namespace CodeGaming
             if (_currentPageId != 2)
             {
                 btnExploration.BackColor = ColorTranslator.FromHtml("#261E35");
+            }
+        }
+
+        private void btnRefueling_MouseEnter(object sender, EventArgs e)
+        {
+            btnRefueling.BackColor = ColorTranslator.FromHtml("#372C44");
+        }
+
+        private void btnRefueling_MouseLeave(object sender, EventArgs e)
+        {
+            if (_currentPageId != 3)
+            {
+                btnRefueling.BackColor = ColorTranslator.FromHtml("#261E35");
             }
         }
 

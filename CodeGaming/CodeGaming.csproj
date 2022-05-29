@@ -211,6 +211,12 @@
     <Compile Include="Pages\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RefuelPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\RefuelPage.Designer.cs">
+      <DependentUpon>RefuelPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TradingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RefuelPage.resx">
+      <DependentUpon>RefuelPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\TradingPage.resx">
       <DependentUpon>TradingPage.cs</DependentUpon>
@@ -305,6 +314,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\newyear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refuel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refuel_pressed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.5.5\build\Fody.targets" Condition="Exists('..\packages\Fody.6.5.5\build\Fody.targets')" />
